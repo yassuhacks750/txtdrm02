@@ -258,7 +258,7 @@ async def download_video(url,cmd, name):
 
 
 async def send_doc(bot: Client, m: Message, cc, ka, cc1, prog, count, name):
-    reply = await m.reply_text(f"**★彡 Uploading 彡★ ...⏳**\n\n📚𝐓𝐢𝐭𝐥𝐞 » {name}\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎🐦")
+    reply = await m.reply_text(f"**★彡 Uploading 彡★ ...⏳**\n\n📚𝐓𝐢𝐭𝐥𝐞 » {name}\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ @Professor750bot🐦")
     time.sleep(1)
     start_time = time.time()
     await bot.send_document(ka, caption=cc1)
@@ -308,7 +308,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog):
 
     # Add watermark text overlay to the video with black color and 20% opacity
     watermarked_filename = f"watermarked_{filename}"
-    watermark_text = "SAINI BOTS"
+    watermark_text = "PROFESSOR"
     subprocess.run(
         f'ffmpeg -i "{filename}" -vf "drawtext=text=\'{watermark_text}\':fontcolor=black@0.2:fontsize=24:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy "{watermarked_filename}"', 
         shell=True
